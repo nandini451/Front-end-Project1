@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme</title>
+    <link rel="icon" type="image/png" href="blissfull_beginings_logo-2.png">
+    <style>
+        body{
+            background-image: url("https://img.freepik.com/premium-photo/supreme-indigo-noise-static-abstract-background-modern-designs_851755-390127.jpg?semt=ais_hybrid&w=740&q=80");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        div{
+            border: 2px double;
+            padding: 20px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            background-color: rgb(227, 196, 227);
+        }
+        label, select, input[type="submit"]{
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        input[type="submit"]{
+            
+            padding: 10px 15px;
+            background-color: rgb(171, 98, 122);
+            color: white;
+            border: dotted;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover{
+            background-color:transparent;
+            color:black;
+        }
+        input[type="text"]:hover{
+            background-color:transparent;
+            border:2px solid palevioletred;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .home{
+            height: 20px;
+            width: 6%;
+            text-align: center;
+            font-size: 24px;
+            margin: 20px;
+            background-color: transparent;
+        }
+        </style>
+</head>
+<body>
+    <div class="home"><a href="welcome.html">HOME</a></div>
+    <form action="welcome.html">
+        <div>
+        <label for="budget">ENTER YOUR BUDGET:</label><br><input type="text" id="budget"><br>
+        </div>
+        <p id="budgetSuggestion"
+style="
+font-size:22px;
+font-weight:bold;
+color:darkblue;
+"></p><br><br>
+        <div>
+            <label for="Location">SELECT THE LOCATION FOR YOUR EVENT:</label><br>
+        <select id="location" name="LOCATION:">
+            <option value="JAIPUR">JAIPUR</option>
+            <option value="GOA">GOA</option>
+            <option value="UDAIPUR">UDAIPUR</option>
+            <option value="KERELA">KERELA</option>
+            <option value="RISHIKESH">RISHIKESH</option>
+            <option value="UTTARAKHAND">UTTARAKHAND</option>
+            <option value="SHIMLA">SHIMLA</option>
+            <option value="MANALI">MANALI</option>
+        </select><br><br>
+        </div><br><br>
+        <div>
+        <label for="THEME">SELECT THE THEME YOU WANT TO DECORATE YOUR EVENT WITH:</label>
+        <select id="THEME" name="THEME:">
+            <option value="ROYAL">ROYAL</option>
+            <option value="MODERN">MODERN</option>
+            <option value="VINTAGE">VINTAGE</option>
+            <option value="RUSTIC">RUSTIC</option>
+            <option value="GARDEN">GARDEN</option>
+            <option value="BEACH">BEACH</option>
+            <option value="TRADITIONAL">TRADITIONAL</option>
+            <option value="FAIRYLAND">FAIRYLAND</option>
+        </select></div><br><br>
+        <p id="priceDisplay" style="
+font-size:22px;
+font-weight:bold;
+color:darkred;
+"></p>
+        <div>
+        <label for="color">ENTER SPECIFIC COLOR COMBINATION:</label><br><input type="text" id="colorInput"><br>
+        <div id="colorPreview" style="
+height:10px;
+width:10px;
+border-radius:0%;
+margin-top:2px;
+border:2px solid black;
+"></div>
+        </div><br><br>
+        <center><input type="submit" value="SUBMIT" id="submitBtn"></center>
+    </form>
+    <script>
+let themeSelect = document.getElementById("THEME");
+let preview = document.getElementById("themePreview");
+let priceDisplay = document.getElementById("priceDisplay");
+themeSelect.addEventListener("change", function(){
+   let theme=this.value;
+   preview.style.display = "block";
+   if(theme==="ROYAL"){
+      preview.src = "https://images.unsplash.com/photo-1519741497674-611481863552";
+      priceDisplay.innerHTML = "Estimated Cost: ₹5,00,000";
+   }
+   else if(theme==="MODERN"){
+      preview.src = "https://images.unsplash.com/photo-1519167758481-83f550bb49b3";
+      priceDisplay.innerHTML = "Estimated Cost: ₹3,00,000";
+   }
+   else if(theme==="VINTAGE"){
+      preview.src = "https://images.unsplash.com/photo-1520854221256-17451cc331bf";
+      priceDisplay.innerHTML = "Estimated Cost: ₹4,00,000";
+   }
+   else if(theme==="BEACH"){
+      preview.src = "https://images.unsplash.com/photo-1507525428034-b723cf961d3e";
+      priceDisplay.innerHTML = "Estimated Cost: ₹6,00,000";
+   }
+   else{
+      preview.src = "https://images.unsplash.com/photo-1511285560929-80b456fea0bc";
+      priceDisplay.innerHTML = "Estimated Cost: ₹2,50,000";
+   }
+});
+document.getElementById("submitBtn").addEventListener("click", function(e){
+   let budget = document.getElementById("budget").value;
+   if(budget === ""){
+      e.preventDefault();
+      alert("Please enter your budget 💸");
+   }
+   else if(isNaN(budget)){
+      e.preventDefault();
+      alert("Budget should be numeric only!");
+   }
+   else{
+      alert("Theme submitted successfully 🎉");
+   }
+});
+document.getElementById("colorInput").addEventListener("input", function(){
+   document.getElementById("colorPreview").style.background =
+   this.value;
+});
+document.getElementById("budget").addEventListener("input", function(){
+   let budget = Number(this.value);
+   let suggestion = document.getElementById("budgetSuggestion");
+   if(budget < 100000){
+      suggestion.innerHTML =
+      "🌸 Recommended Theme: Garden or Rustic";
+   }
+   else if(budget >= 100000 && budget <= 500000){
+      suggestion.innerHTML =
+      "✨ Recommended Theme: Modern or Traditional";
+   }
+   else if(budget > 500000){
+      suggestion.innerHTML =
+      "👑 Recommended Theme: Royal or Beach";
+   }
+   else{
+      suggestion.innerHTML = "";
+   }
+});
+</script>
+</body>
+</html>

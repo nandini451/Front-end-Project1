@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering Services</title>
+    <link rel="icon" type="image/png" href="blissfull_beginings_logo-2.png">
+    <style>
+      h1{
+        margin-top:70px;
+        font-size: 60px;
+        color:rgb(239, 180, 239);
+      }
+      h2{
+        font-size: 30px;
+        margin-top: 0px;
+        color: rgb(239, 180, 239);
+        text-shadow: rgb(244, 223, 244) 1px 1px 4px;
+      }
+    body{
+        background-image: url('https://img.freepik.com/premium-photo/silver-cutlery-black-background-table-setting-banquet-concept_201836-9389.jpg?semt=ais_hybrid&w=740&q=80');
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        text-align:center;
+        color:rgb(239, 180, 239);
+        text-shadow: rgb(244, 223, 244) 1px 1px 4px;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+    }
+    .options {
+      background: beige;
+      border: 1px solid grey;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 5px;
+    }
+    .options label {
+      display: block;
+      margin: 5px 0;
+    }
+    input{
+      color: black;
+    }
+    label {
+      display:block;
+      color: black;
+      text-align: left;
+    }
+    summary{
+      color:black;
+      cursor: pointer;
+      text-align:left;
+    }
+    .menu{
+      font-size: 24px;
+      font-weight: bold;
+      color:rgb(239, 180, 239);
+      text-shadow: rgb(244, 223, 244) 1px 1px 4px;
+      margin-top: 0px;
+    }
+    input[type="submit"]{
+        background-color:  rgb(244, 223, 244);
+        color: black;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 50px;
+    }
+    input[type="submit"]:hover{
+        background-color: transparent;
+        border-radius: 10px;
+        color:white;
+        border: 2px dotted white;
+        padding: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .home{
+        text-align: right;
+        font-size: 24px;
+        margin: 20px;
+    }
+
+    .options label:hover{
+   transform:translateX(10px);
+   transition:0.3s;
+   color:purple;
+}
+    </style>
+</head>
+<body>
+  <div class="home"><a href="welcome.html">HOME</a></div>
+    <center>  
+    <h1>Catering Services</h1>
+    <br>
+    <h2>Select the MENU that you like</h2>
+    <br>
+    <form>
+     <div class="container">
+      <details>
+    <summary class="menu">Menu</summary>
+    <div class="options">
+      <details>
+        <summary>Main Course</summary>
+        <div class="options">
+          <label><input type="checkbox" value="Palak Paneer" data-price="250"> Palak Paneer</label>
+          <label><input type="checkbox" value="Paneer Butter Masala" data-price="300"> Paneer Butter Masala</label>
+          <label><input type="checkbox" value="Dal Makhani" data-price="200"> Dal Makhani</label>
+          <label><input type="checkbox" value="Veg Biryani" data-price="150"> Veg Biryani</label>
+          <label><input type="checkbox" value="Chana Masala" data-price="180">Chana Masala</label>
+          <label><input type="checkbox" value="Veg Biryani" data-price="150"> Veg Biryani</label>
+          <label><input type="checkbox" value="Malai Kofta" data-price="200">Malai Kofta</label>
+          <label><input type="checkbox" value="Vegetable Lasagna" data-price="250">Vegetable Lasagna</label>
+          <label><input type="checkbox" value="Vegetable Wellington" data-price="300"> Vegetable Wellington</label>
+          <label><input type="checkbox" value="Stuffed Pumpkin/Squash" data-price="200">Stuffed Pumpkin/Squash</label>
+          <label><input type="checkbox" value="Vegetarian Enchiladas" data-price="250">Vegetarian Enchiladas</label>
+          <label><input type="checkbox" value="Thai Green or Red Curry" data-price="200">Thai Green or Red Curry</label>
+          <label><input type="checkbox" value="Butter Naan" data-price="50">Butter Naan</label>
+          <label><input type="checkbox" value="Garlic Naan" data-price="50">Garlic Naan</label>
+          <label><input type="checkbox" value="Missi Roti" data-price="40">Missi Roti</label>
+          <label><input type="checkbox" value="Tawa Roti" data-price="40">Tawa Roti</label>
+          <label><input type="checkbox" value="Kulcha" data-price="60">Kulcha</label>
+          <label><input type="checkbox" value="Plain Rice" data-price="30">Plain Rice</label>
+          <label><input type="checkbox" value="Jeera Rice" data-price="35">Jeera Rice</label>
+          <label><input type="checkbox" value="Pulao" data-price="40">Pulao</label>
+        </div>
+      </details>
+      <details>
+        <summary>Dessert</summary>
+        <div class="options">
+          <label><input type="checkbox" value="Mini Cheesecakes/Tarts" data-price="100">Mini Cheesecakes/Tarts</label>
+          <label><input type="checkbox" value="Brownies & Bars" data-price="120">Brownies & Bars</label>
+          <label><input type="checkbox" value="Cupcakes & Cakes" data-price="150">Cupcakes & Cakes</label>
+          <label><input type="checkbox" value="Cookies" data-price="80">Cookies</label>
+          <label><input type="checkbox" value="Ladoo" data-price="50">Ladoo</label>
+          <label><input type="checkbox" value="Halwa" data-price="60">Halwa</label>
+          <label><input type="checkbox" value="Gulab Jamun" data-price="70"> Gulab Jamun</label>
+          <label><input type="checkbox" value="Barfi / Burfi" data-price="80">Barfi / Burfi</label>
+          <label><input type="checkbox" value="Baklava" data-price="100">Baklava</label>
+        </div>
+      </details>
+      <details>
+        <summary>Beverages</summary>
+        <div class="options">
+          <label><input type="checkbox" value="Soft Drinks" data-price="30">Soft Drinks</label>
+          <label><input type="checkbox" value="Juices" data-price="40">Juices</label>
+          <label><input type="checkbox" value="Mocktails" data-price="50">Mocktails</label>
+             <label><input type="checkbox" value="Cocktails" data-price="60">Cocktails</label>
+          <label><input type="checkbox" value="Lassi" data-price="35"> Lassi</label>
+          <label><input type="checkbox" value="Masala Chai/Coffee" data-price="25"> Masala Chai/Coffee</label>
+          <label><input type="checkbox" value="Fresh Lime Soda/Nimbu Pani" data-price="30">Fresh Lime Soda/Nimbu Pani</label>
+          <label><input type="checkbox" value="Badam Drink (Almond Milk)" data-price="40">Badam Drink (Almond Milk)</label>
+          <label><input type="checkbox" value="Aam Panna" data-price="35">Aam Panna</label>
+        </div>
+      </details>
+      <details>
+      <summary>Snacks</summary>
+        <div class="options">
+          <label><input type="checkbox" value="Mini samosas" data-price="50">Mini samosas</label>
+          <label><input type="checkbox" value="Paneer Tikka" data-price="60">Paneer Tikka</label>
+          <label><input type="checkbox" value="Aloo Tikki" data-price="40">Aloo Tikki</label>
+          <label><input type="checkbox" value="Dhokla" data-price="30">Dhokla</label>
+          <label><input type="checkbox" value="Bhel Puri / Pani Puri" data-price="25">Bhel Puri / Pani Puri</label>
+          <label><input type="checkbox" value="Pakoras" data-price="35">Pakoras</label>
+          <label><input type="checkbox" value="Spring Rolls" data-price="40">Spring Rolls</label>
+          <label><input type="checkbox" value="Cheese Corn Balls" data-price="50">Cheese Corn Balls</label>
+          <label><input type="checkbox" value="Stuffed Mushrooms" data-price="60">Stuffed Mushrooms</label>
+          <label><input type="checkbox" value="Caprese Skewers" data-price="70">Caprese Skewers</label>
+          <label><input type="checkbox" value="Mini Veg Burgers/Sliders" data-price="45">Mini Veg Burgers/Sliders</label>
+        </div>
+      </details>
+    </div>
+  </details>
+     </div>
+     <br><br>
+     <div id="summaryBox" style="
+background:rgba(255,255,255,0.2);
+font-family: 'Courier New', Courier, monospace;
+text-shadow: none;
+padding:20px;
+border-radius:15px;
+width:20%;
+margin:auto;
+backdrop-filter:blur(10px);
+font-size:20px;
+">
+<h3>Your Selected Items 🍽️</h3>
+
+<ul id="selectedItems"></ul>
+
+<p id="itemCount">Total Items: 0</p>
+
+<p id="totalPrice">Total Price: ₹0</p>
+</div>
+     <input type="submit" value="Submit Menu Choices" id="submitBtn">
+     </form>
+  </center> 
+  <script>
+
+
+let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+let selectedItems = document.getElementById("selectedItems");
+
+let itemCount = document.getElementById("itemCount");
+
+let totalPrice = document.getElementById("totalPrice");
+
+checkboxes.forEach(box => {
+
+    box.addEventListener("change", updateSummary);
+
+});
+
+function updateSummary(){
+
+    selectedItems.innerHTML = "";
+
+    let count = 0;
+
+    let total = 0;
+
+    checkboxes.forEach(box => {
+
+        if(box.checked){
+
+            count++;
+
+            let li = document.createElement("li");
+
+            li.innerHTML = box.value;
+
+            selectedItems.appendChild(li);
+
+            total += Number(box.dataset.price);
+
+        }
+
+    });
+
+    itemCount.innerHTML = "Total Items: " + count;
+
+    totalPrice.innerHTML = "Total Price: ₹" + total;
+
+}
+
+
+
+document.getElementById("submitBtn").addEventListener("click", function(e){
+
+    e.preventDefault();
+
+    let checked = document.querySelectorAll('input[type="checkbox"]:checked');
+
+    if(checked.length === 0){
+
+        alert("Please select at least one item 🍽️");
+
+    }
+
+    else{
+
+        alert("Menu submitted successfully 🎉");
+
+    }
+
+});
+
+  </script>
+</body>
+</html>

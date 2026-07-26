@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLISSFULL BEGININGS</title>
+    <link rel="icon" type="image/png" href="blissfull_beginings_logo-2.png">
+    
+    <style>
+    body{
+        background-image: url('https://img.freepik.com/free-photo/blue-smoky-art-abstract-background_53876-108417.jpg?semt=ais_hybrid&w=740&q=80');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .container1{
+        width: 30%;
+        animation-delay: 1s;
+        animation:animation1 1s forwards;
+    }
+    hr{
+        border: none;
+        border-top: 3px dotted white;
+    }
+    h1{
+        font-family: Brush Script MT;
+        color: white;
+        font-size: 100px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    input[type="submit"]{
+        background-color: white;
+        color:black; ;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 5px;
+    }
+    input[type="submit"]:hover{
+        background-color: transparent;
+        color:white;
+        border: 2px dotted white;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+    @keyframes animation1{
+        0% {
+            opacity: 0;visibility: hidden;
+    }
+    50% {
+            opacity: 0;visibility: hidden;
+        }
+        100% {
+            opacity: 1;visibility: visible;
+        }
+    }
+   @keyframes animation2 {
+      0%   { transform: scale(1.5); margin-top:200px ;}
+      20%  { transform: scale(1); margin-top:200px ;} 
+      40%  { transform: scale(1.5); margin-top:200px}
+      60%  { transform: scale(1); margin-top:200px;}
+      80%  {margin-top:0px}
+      100% {opacity: 0;}
+    }
+    .container2 {
+        animation: animation2 1s linear forwards;
+    }
+    .container1, .container2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.wrapper {
+    position: relative;
+    width: 400px;
+    height:400px;
+}
+label,p{
+    color: white;
+}
+.container3{
+border: 3px dotted white;
+padding: 20px;
+background-color: rgb(10, 10, 62);
+opacity: 0.8;
+border-radius: 15px;
+}
+.container3:hover{
+    box-shadow: 0 0 10px white, 0 0 20px white;
+    transition: box-shadow 1s;
+    scale: 1.05;
+    transition: scale 1s;
+}
+input[type="email"]:hover{
+       background-color: transparent;
+        color:white;
+        scale:1.01;
+        border: 2px solid white;
+    }
+    input[type="password"]:hover{
+        background-color: transparent;
+        color:white;
+        scale:1.01;
+        border: 2px solid white;
+    }
+    .logo{
+          
+      border-radius: 10px;
+      box-shadow: 0 8px 25px white;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .home {
+    position: absolute;   
+    top: 20px;            
+    left: 40px;          
+    font-size: 24px;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgb(1, 1, 49);
+    }
+    </style>
+</head>     
+<body>
+    <div class="home"><a href="welcome.html">HOME</a></div>
+    <div class="wrapper">
+    <center><div class="container2"><img src="blissfull_beginings_logo-2.png" class="logo"></div>
+    </center>
+    <div class="container1">
+        <center><h1>Login :</h1></center>
+    <div class="container3"><form action="main.html" method="get">
+        <label for="Email" >EMAIL ID:</label><input type="email" id="Email" name="email" required><br>
+        <hr>
+        <label for="password">PASSWORD:</label><input type="password" id="password" name="password" required><br>
+        <hr>
+        <input type="submit" value="Login"><br>
+    </form>   
+    <p>If new! <a href="sign-in.html">Sign In</a></p> 
+    </div>
+    </div>
+</div>
+</body>
+</html>

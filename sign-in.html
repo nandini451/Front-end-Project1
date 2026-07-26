@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLISSFULL BEGININGS</title>
+    <link rel="icon" type="image/png" href="blissfull_beginings_logo-2.png">
+    <style>
+        body{
+        background-image: url('https://images.unsplash.com/photo-1497864149936-d3163f0c0f4b?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9naW58ZW58MHx8MHx8fDA%3D');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .form{
+        width: 30%;
+        border: 3px dotted white;
+        margin-top: 70px;
+        padding: 20px;
+        border-radius: 15px;
+    }
+    hr{
+        border: none;
+        border-top: 3px dotted white;
+    }
+    label{
+        color: white;
+    }
+    h1{
+        font-family: Brush Script MT;
+        color: white;
+        font-size: 80px;
+    }
+    input[type="submit"]{
+        background-color: white;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 5px;
+    }
+    input[type="submit"]:hover{
+        background-color: transparent;
+        color:white;
+        border: 2px dotted white;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+    abbr{
+        color: white;
+    }
+    .form:hover{
+        box-shadow: 0 0 10px white, 0 0 20px white;
+        transition: box-shadow 1s;
+        scale: 1.05;
+        transition: scale 1s;
+    }
+    input[type="email"]:hover{
+       background-color: transparent;
+        color:white;
+        scale:1.01;
+        border: 2px solid white;
+    }
+    input[type="text"]:hover{
+        background-color: transparent;
+        color:white;
+        scale:1.01;
+        border: 2px solid white;
+    }
+    input[type="password"]:hover{
+        background-color: transparent;
+        color:white;
+        scale:1.01;
+        border: 2px solid white;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .home{
+        text-align: right;
+        font-size: 24px;
+        margin: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="home"><a href="welcome.html">HOME</a></div>
+    <center><h1>REGISTER</h1></center>
+    <center><div class="form"><form action="login-page.html" method="get">
+        <label for="Email" >EMAIL ID:</label><input type="email" id="Email" name="email" required><br>
+        <hr>
+        <label for=name>NAME:</label><input type="text" id="name" name="name" required><br>
+        <hr>
+        <label for="password">PASSWORD:</label><input type="password" id="password" name="password" pattern="(?=.*[A-Z])(?=.*[a-z]).*" minlength="8" maxlength="15" title="Must be at least 8 characters, max 15,should contain an uppercase and lowercase letter" required><br>
+        <hr>
+        <input type="submit" value="Sign in"><br>
+        </form>
+    </div></center>
+</body>
+</html>
